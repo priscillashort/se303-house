@@ -1,4 +1,8 @@
 class House
+    def recite
+
+    end
+
     def line(number)
         if number == 1
             "This is the house that Jack built.\n"
