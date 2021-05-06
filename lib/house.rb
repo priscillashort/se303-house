@@ -9,8 +9,6 @@ class House
 
     def line(number)
         case number
-        when 2
-            "This is #{phrase(number)}the house that Jack built.\n"
         when 3
             "This is the rat that ate the malt that lay in the house that Jack built.\n"
         when 4
