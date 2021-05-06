@@ -17,8 +17,6 @@ class House
         case number
         when 0
             ""
-        when 7
-            "#{pieces[number-1]}#{phrase(number-1)}"
         when 8
             "the man all tattered and torn that kissed #{phrase(number-1)}"
         when 9
