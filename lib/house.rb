@@ -18,7 +18,7 @@ class House
         when 0
             ""
         when 4
-            "the cat that killed #{phrase(number-1)}"
+            "#{pieces[number-1]}#{phrase(number-1)}"
         when 5
             "the dog that worried #{phrase(number-1)}"
         when 6
@@ -44,7 +44,8 @@ class House
         [
             '',
             'the malt that lay in ',
-            'the rat that ate '
+            'the rat that ate ',
+            'the cat that killed '
         ]
     end
 end
