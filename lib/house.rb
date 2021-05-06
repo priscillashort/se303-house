@@ -18,7 +18,7 @@ class House
         when 0
             ""
         when 3
-            "the rat that ate #{phrase(number-1)}"
+            "#{pieces[number-1]}#{phrase(number-1)}"
         when 4
             "the cat that killed #{phrase(number-1)}"
         when 5
@@ -45,7 +45,8 @@ class House
     def pieces
         [
             '',
-            'the malt that lay in '
+            'the malt that lay in ',
+            'the rat that ate '
         ]
     end
 end
