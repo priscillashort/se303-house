@@ -18,7 +18,7 @@ class House
         when 0
             ""
         when 5
-            "the dog that worried #{phrase(number-1)}"
+            "#{pieces[number-1]}#{phrase(number-1)}"
         when 6
             "the cow with the crumpled horn that tossed #{phrase(number-1)}"
         when 7
@@ -43,7 +43,8 @@ class House
             '',
             'the malt that lay in ',
             'the rat that ate ',
-            'the cat that killed '
+            'the cat that killed ',
+            'the dog that worried '
         ]
     end
 end
