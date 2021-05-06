@@ -16,7 +16,7 @@ class House
     def phrase(number)
         case number
         when 1
-            ""
+            "#{pieces[number]}"
         when 2
             "the malt that lay in #{phrase(number-1)}"
         when 3
