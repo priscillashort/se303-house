@@ -10,7 +10,7 @@ class House
     def line(number)
         case number
         when 9
-            "This is the priest all shaven and shorn that married the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
+            "This is #{phrase(number)}the house that Jack built.\n"
         when 10
             "This is the rooster that crowed in the morn that woke the priest all shaven and shorn that married the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
         when 11
@@ -38,6 +38,8 @@ class House
             "the maiden all forlorn that milked #{phrase(6)}"
         when 8
             "the man all tattered and torn that kissed #{phrase(7)}"
+        when 9
+            "the priest all shaven and shorn that married the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in "
         else
             ""
         end
