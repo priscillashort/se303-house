@@ -45,6 +45,8 @@ class House
     end
 
     def pieces
-
+        [
+            ''
+        ]
     end
 end
