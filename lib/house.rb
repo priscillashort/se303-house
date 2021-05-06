@@ -36,7 +36,7 @@ class House
         end
     end
 
-    def phrase
+    def phrase(number = :FIXME)
         "the malt that lay in "
     end
 end
