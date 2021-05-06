@@ -17,8 +17,6 @@ class House
         case number
         when 0
             ""
-        when 9
-            "#{pieces[number-1]}#{phrase(number-1)}"
         when 10
             "the rooster that crowed in the morn that woke #{phrase(number-1)}"
         when 11
