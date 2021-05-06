@@ -8,25 +8,25 @@ class House
     end
 
     def line(number)
-        "This is #{pieces.reverse.last(number).join('')}.\n"
+        "This is #{pieces.last(number).join('')}.\n"
     end
 
     private
 
     def pieces
         [
-            'the house that Jack built',
-            'the malt that lay in ',
-            'the rat that ate ',
-            'the cat that killed ',
-            'the dog that worried ',
-            'the cow with the crumpled horn that tossed ',
-            'the maiden all forlorn that milked ',
-            'the man all tattered and torn that kissed ',
-            'the priest all shaven and shorn that married ',
-            'the rooster that crowed in the morn that woke ',
+            'the horse and the hound and the horn that belonged to ',
             'the farmer sowing his corn that kept ',
-            'the horse and the hound and the horn that belonged to '
+            'the rooster that crowed in the morn that woke ',
+            'the priest all shaven and shorn that married ',
+            'the man all tattered and torn that kissed ',
+            'the maiden all forlorn that milked ',
+            'the cow with the crumpled horn that tossed ',
+            'the dog that worried ',
+            'the cat that killed ',
+            'the rat that ate ',
+            'the malt that lay in ',
+            'the house that Jack built'
         ]
     end
 end
