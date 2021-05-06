@@ -13,6 +13,8 @@ class House
 
     def phrase(number)
         case number
+        when 1
+            ""
         when 2
             "the malt that lay in "
         when 3
