@@ -17,10 +17,8 @@ class House
         case number
         when 0
             ""
-        when 11
-            "#{pieces[number-1]}#{phrase(number-1)}"
         when 12
-            "the horse and the hound and the horn that belonged to #{phrase(number-1)}"
+            "#{pieces[number-1]}#{phrase(number-1)}"
         else
             "#{pieces[number-1]}#{phrase(number-1)}"
         end
@@ -38,7 +36,8 @@ class House
             'the man all tattered and torn that kissed ',
             'the priest all shaven and shorn that married ',
             'the rooster that crowed in the morn that woke ',
-            'the farmer sowing his corn that kept '
+            'the farmer sowing his corn that kept ',
+            'the horse and the hound and the horn that belonged to '
         ]
     end
 end
