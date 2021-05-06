@@ -17,10 +17,6 @@ class House
         case number
         when 0
             ""
-        when 1
-            "#{pieces[number-1]}#{phrase(number-1)}"
-        when 2
-            "#{pieces[number-1]}#{phrase(number-1)}"
         when 3
             "the rat that ate #{phrase(number-1)}"
         when 4
