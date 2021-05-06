@@ -36,7 +36,12 @@ class House
         end
     end
 
-    def phrase(number = :FIXME)
-        "the malt that lay in "
+    def phrase(number = 2)
+        case number
+        when 2
+            "the malt that lay in "
+        else
+            ""
+        end
     end
 end
