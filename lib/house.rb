@@ -13,14 +13,6 @@ class House
 
     private
 
-    def phrase(number)
-        if number == 0
-            ""
-        else
-            "#{pieces[number-1]}#{phrase(number-1)}"
-        end
-    end
-
     def pieces
         [
             'the house that Jack built',
