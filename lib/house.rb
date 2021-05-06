@@ -42,7 +42,7 @@ class House
         when 12
             "the horse and the hound and the horn that belonged to #{phrase(number-1)}"
         else
-            ""
+            "#{pieces[number-1]}#{phrase(number-1)}"
         end
     end
 
