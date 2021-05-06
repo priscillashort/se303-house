@@ -43,4 +43,8 @@ class House
             ""
         end
     end
+
+    def pieces
+
+    end
 end
