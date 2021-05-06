@@ -8,7 +8,7 @@ class House
     end
 
     def line(number)
-        "This is #{phrase(number)}.\n"
+        "This is #{pieces.reverse.last(number).join('')}.\n"
     end
 
     private
