@@ -11,6 +11,8 @@ class House
         "This is #{phrase(number)}the house that Jack built.\n"
     end
 
+    private
+
     def phrase(number)
         case number
         when 1
