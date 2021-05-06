@@ -17,8 +17,6 @@ class House
         case number
         when 0
             ""
-        when 12
-            "#{pieces[number-1]}#{phrase(number-1)}"
         else
             "#{pieces[number-1]}#{phrase(number-1)}"
         end
