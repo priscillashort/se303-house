@@ -8,7 +8,7 @@ class House
     end
 
     def line(number)
-        "This is #{phrase(number)}the house that Jack built.\n"
+        "This is #{phrase(number)}.\n"
     end
 
     private
@@ -23,7 +23,7 @@ class House
 
     def pieces
         [
-            '',
+            'the house that Jack built',
             'the malt that lay in ',
             'the rat that ate ',
             'the cat that killed ',
