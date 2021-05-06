@@ -17,8 +17,6 @@ class House
         case number
         when 0
             ""
-        when 8
-            "#{pieces[number-1]}#{phrase(number-1)}"
         when 9
             "the priest all shaven and shorn that married #{phrase(number-1)}"
         when 10
