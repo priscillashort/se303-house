@@ -18,7 +18,7 @@ class House
         when 0
             ""
         when 9
-            "the priest all shaven and shorn that married #{phrase(number-1)}"
+            "#{pieces[number-1]}#{phrase(number-1)}"
         when 10
             "the rooster that crowed in the morn that woke #{phrase(number-1)}"
         when 11
@@ -39,7 +39,8 @@ class House
             'the dog that worried ',
             'the cow with the crumpled horn that tossed ',
             'the maiden all forlorn that milked ',
-            'the man all tattered and torn that kissed '
+            'the man all tattered and torn that kissed ',
+            'the priest all shaven and shorn that married '
         ]
     end
 end
