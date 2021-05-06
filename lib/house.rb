@@ -17,8 +17,6 @@ class House
         case number
         when 0
             ""
-        when 6
-            "#{pieces[number-1]}#{phrase(number-1)}"
         when 7
             "the maiden all forlorn that milked #{phrase(number-1)}"
         when 8
