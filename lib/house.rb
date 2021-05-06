@@ -17,8 +17,6 @@ class House
         case number
         when 0
             ""
-        when 5
-            "#{pieces[number-1]}#{phrase(number-1)}"
         when 6
             "the cow with the crumpled horn that tossed #{phrase(number-1)}"
         when 7
