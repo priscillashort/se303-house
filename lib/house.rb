@@ -17,8 +17,6 @@ class House
         case number
         when 0
             ""
-        when 10
-            "#{pieces[number-1]}#{phrase(number-1)}"
         when 11
             "the farmer sowing his corn that kept #{phrase(number-1)}"
         when 12
