@@ -37,7 +37,7 @@ class House
         when 3
             "the rat that ate #{phrase(2)}"
         when 4
-            "the cat that killed the rat that ate the malt that lay in "
+            "the cat that killed #{phrase(3)}"
         else
             ""
         end
