@@ -17,8 +17,6 @@ class House
         case number
         when 0
             ""
-        when 3
-            "#{pieces[number-1]}#{phrase(number-1)}"
         when 4
             "the cat that killed #{phrase(number-1)}"
         when 5
