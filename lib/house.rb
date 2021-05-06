@@ -18,7 +18,7 @@ class House
         when 1
             "#{pieces[number-1]}"
         when 2
-            "the malt that lay in #{phrase(number-1)}"
+            "#{pieces[number-1]}#{phrase(number-1)}"
         when 3
             "the rat that ate #{phrase(number-1)}"
         when 4
