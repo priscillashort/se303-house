@@ -14,8 +14,7 @@ class House
     private
 
     def phrase(number)
-        case number
-        when 0
+        if number == 0
             ""
         else
             "#{pieces[number-1]}#{phrase(number-1)}"
