@@ -1,8 +1,4 @@
 class House
-    def initialize
-
-    end
-    
     def recite
         (1..pieces.length).collect { |i| line(i) }.join("\n")
     end
