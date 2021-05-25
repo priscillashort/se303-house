@@ -34,5 +34,7 @@ class House
 end
 
 class RandomHouse < House
-
+    def recite
+        super.recite
+    end
 end
