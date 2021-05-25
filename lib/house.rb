@@ -32,3 +32,7 @@ class House
         ]
     end
 end
+
+class RandomHouse < House
+
+end
