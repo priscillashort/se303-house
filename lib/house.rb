@@ -1,4 +1,6 @@
 class House
+    attr_reader :prefix
+    
     def initialize(prefix = "This is ")
         @prefix = prefix
     end
