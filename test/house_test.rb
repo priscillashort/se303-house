@@ -184,31 +184,39 @@ Thar be the horse and the hound and the horn that belonged to the farmer sowing 
   end
 
   def test_random_line_12
-    expected = "This is "
+    expected_start = "This is "
+    expected_end = "the house that Jack built."
     expected_length = 416
     actual = RandomHouse.new.line(12)
-    assert actual.include?(expected)
+    assert_equal expected_start, actual[0..expected_start.length-1]
+    assert_equal expected_end, actual[-(expected_end.length+1)..actual.length-2]
     assert_equal expected_length, actual.length
   end
 
   def test_all_the_random_lines
-    expected = "This is "
+    expected_start = "This is "
+    expected_end = "the house that Jack built."
     actual = RandomHouse.new.recite
-    assert actual.include?(expected)
+    assert_equal expected_start, actual[0..expected_start.length-1]
+    assert_equal expected_end, actual[-(expected_end.length+1)..actual.length-2]
   end
 
   def test_random_pirate_line_12
-    expected = "Thar be "
+    expected_start = "Thar be "
+    expected_end = "the house that Jack built."
     expected_length = 416
     actual = RandomHouse.new("Thar be ").line(12)
-    assert actual.include?(expected)
+    assert_equal expected_start, actual[0..expected_start.length-1]
+    assert_equal expected_end, actual[-(expected_end.length+1)..actual.length-2]
     assert_equal expected_length, actual.length
   end
 
   def test_all_the_random_pirate_lines
-    expected = "Thar be "
+    expected_start = "Thar be "
+    expected_end = "the house that Jack built."
     actual = RandomHouse.new("Thar be ").recite
-    assert actual.include?(expected)
+    assert_equal expected_start, actual[0..expected_start.length-1]
+    assert_equal expected_end, actual[-(expected_end.length+1)..actual.length-2]
   end
 
 end
