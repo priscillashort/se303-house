@@ -34,7 +34,7 @@ class House
 end
 
 class RandomHouse < House
-    def recite
-        super.recite
+    def pieces
+        super.sort_by { rand }
     end
 end
