@@ -35,6 +35,7 @@ end
 
 class RandomHouse < House
     def pieces
-        super.sort_by { rand }
+        rand_pieces = super
+        rand_pieces[0..rand_pieces.length-2].sort_by { rand }.append rand_pieces[rand_pieces.length-1]
     end
 end
