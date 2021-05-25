@@ -183,6 +183,14 @@ Thar be the horse and the hound and the horn that belonged to the farmer sowing 
     assert_equal expected, House.new("Thar be ").recite
   end
 
+  def test_random_line_5
+    expected_start = "This is "
+    expected_end = "the house that Jack built."
+    actual = RandomHouse.new.line(5)
+    assert_equal expected_start, actual[0..expected_start.length-1]
+    assert_equal expected_end, actual[-(expected_end.length+1)..actual.length-2]
+  end
+
   def test_random_line_12
     expected_start = "This is "
     expected_end = "the house that Jack built."
@@ -197,6 +205,14 @@ Thar be the horse and the hound and the horn that belonged to the farmer sowing 
     expected_start = "This is "
     expected_end = "the house that Jack built."
     actual = RandomHouse.new.recite
+    assert_equal expected_start, actual[0..expected_start.length-1]
+    assert_equal expected_end, actual[-(expected_end.length+1)..actual.length-2]
+  end
+
+  def test_random_pirate_line_5
+    expected_start = "Thar be "
+    expected_end = "the house that Jack built."
+    actual = RandomHouse.new("Thar be ").line(5)
     assert_equal expected_start, actual[0..expected_start.length-1]
     assert_equal expected_end, actual[-(expected_end.length+1)..actual.length-2]
   end
