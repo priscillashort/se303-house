@@ -3,6 +3,7 @@ class House
     
     def initialize(prefix = "This is ")
         @prefix = prefix
+        @pieces_array = subjects.zip(verbs)
     end
 
     def recite
@@ -16,42 +17,39 @@ class House
     private
 
     def pieces
-        zip_pieces.append('the house that Jack built')
-    end
-
-    def zip_pieces
-        subjects.map.with_index { |_, idx| ["the #{subjects[idx]} that #{verbs[idx]}"] }
+        @pieces_array.map{|first, second| "#{first}#{second}"}
+            .append('the house that Jack built')
     end
 
     def subjects
         [
-            'horse and the hound and the horn',
-            'farmer sowing his corn',
-            'rooster that crowed in the morn',
-            'priest all shaven and shorn',
-            'man all tattered and torn',
-            'maiden all forlorn',
-            'cow with the crumpled horn',
-            'dog',
-            'cat',
-            'rat',
-            'malt'
+            'the horse and the hound and the horn',
+            'the farmer sowing his corn',
+            'the rooster that crowed in the morn',
+            'the priest all shaven and shorn',
+            'the man all tattered and torn',
+            'the maiden all forlorn',
+            'the cow with the crumpled horn',
+            'the dog',
+            'the cat',
+            'the rat',
+            'the malt'
         ]
     end
 
     def verbs
         [
-            'belonged to',
-            'kept',
-            'woke',
-            'married',
-            'kissed',
-            'milked',
-            'tossed',
-            'worried',
-            'killed',
-            'ate',
-            'lay in'
+            ' that belonged to',
+            ' that kept',
+            ' that woke',
+            ' that married',
+            ' that kissed',
+            ' that milked',
+            ' that tossed',
+            ' that worried',
+            ' that killed',
+            ' that ate',
+            ' that lay in'
         ]
     end
 end
@@ -60,18 +58,10 @@ class RandomHouse < House
     private
 
     def subjects
-        if @rand_subjects == nil
-            @rand_subjects = super.sort_by { rand }
-        end
-
-        @rand_subjects
+        super.sort_by { rand }
     end
 
     def verbs
-        if @rand_verbs == nil
-            @rand_verbs = super.sort_by { rand }
-        end
-
-        @rand_verbs
+        super.sort_by { rand }
     end
 end
