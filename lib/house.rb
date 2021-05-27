@@ -52,8 +52,6 @@ end
 class RandomHouse < House
     def initialize(prefix = "This is ")
         super(prefix)
-        @subjects = @subjects.sort_by { rand }
-        @verbs = @verbs.sort_by { rand }
-        @pieces_array = @subjects.zip(@verbs)
+        @pieces_array = @subjects.sort_by { rand }.zip(@verbs.sort_by { rand })
     end
 end
