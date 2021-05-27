@@ -37,7 +37,12 @@ class RandomHouse < House
     private
 
     def pieces
-        rand_pieces = super
-        rand_pieces[0..rand_pieces.length-2].sort_by { rand }.append rand_pieces[rand_pieces.length-1]
+        if @rand_pieces == nil
+            super_pieces = super
+            @rand_pieces = super_pieces[0..super_pieces.length-2].sort_by { rand }
+                .append super_pieces[super_pieces.length-1]
+        else
+            @rand_pieces
+        end
     end
 end
