@@ -17,7 +17,7 @@ class House
     private
 
     def pieces
-        @pieces_array.map{|first, second| "#{first}#{second}"}
+        @pieces_array.map{|subs, vrbs| "#{subs}#{vrbs}"}
             .append('the house that Jack built')
     end
 
