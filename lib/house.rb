@@ -16,19 +16,42 @@ class House
     private
 
     def pieces
+        zip_pieces.append('the house that Jack built')
+    end
+
+    def zip_pieces
+        subjects.map.with_index { |_, idx| ["the #{subjects[idx]} that #{verbs[idx]}"] }
+    end
+
+    def subjects
         [
-            'the horse and the hound and the horn that belonged to',
-            'the farmer sowing his corn that kept',
-            'the rooster that crowed in the morn that woke',
-            'the priest all shaven and shorn that married',
-            'the man all tattered and torn that kissed',
-            'the maiden all forlorn that milked',
-            'the cow with the crumpled horn that tossed',
-            'the dog that worried',
-            'the cat that killed',
-            'the rat that ate',
-            'the malt that lay in',
-            'the house that Jack built'
+            'horse and the hound and the horn',
+            'farmer sowing his corn',
+            'rooster that crowed in the morn',
+            'priest all shaven and shorn',
+            'man all tattered and torn',
+            'maiden all forlorn',
+            'cow with the crumpled horn',
+            'dog',
+            'cat',
+            'rat',
+            'malt'
+        ]
+    end
+
+    def verbs
+        [
+            'belonged to',
+            'kept',
+            'woke',
+            'married',
+            'kissed',
+            'milked',
+            'tossed',
+            'worried',
+            'killed',
+            'ate',
+            'lay in'
         ]
     end
 end
@@ -36,13 +59,19 @@ end
 class RandomHouse < House
     private
 
-    def pieces
-        if @rand_pieces == nil
-            super_pieces = super
-            @rand_pieces = super_pieces[0..super_pieces.length-2].sort_by { rand }
-                .append super_pieces[super_pieces.length-1]
-        else
-            @rand_pieces
+    def subjects
+        if @rand_subjects == nil
+            @rand_subjects = super.sort_by { rand }
         end
+
+        @rand_subjects
+    end
+
+    def verbs
+        if @rand_verbs == nil
+            @rand_verbs = super.sort_by { rand }
+        end
+
+        @rand_verbs
     end
 end
