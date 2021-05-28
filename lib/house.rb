@@ -16,8 +16,6 @@ class House
             ['the rat',' that ate'],
             ['the malt', ' that lay in']
         ]
-        @pieces_array = @pieces_array.collect(&:first)
-            .zip(@pieces_array.collect(&:last))
     end
 
     def recite
