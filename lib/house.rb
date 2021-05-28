@@ -3,33 +3,21 @@ class House
     
     def initialize(prefix = "This is ")
         @prefix = prefix
-        @subjects = [
-            'the horse and the hound and the horn',
-            'the farmer sowing his corn',
-            'the rooster that crowed in the morn',
-            'the priest all shaven and shorn',
-            'the man all tattered and torn',
-            'the maiden all forlorn',
-            'the cow with the crumpled horn',
-            'the dog',
-            'the cat',
-            'the rat',
-            'the malt'
+        @pieces_array = [
+            ['the horse and the hound and the horn', ' that belonged to'],
+            ['the farmer sowing his corn', ' that kept'],
+            ['the rooster that crowed in the morn', ' that woke'],
+            ['the priest all shaven and shorn', ' that married'],
+            ['the man all tattered and torn', ' that kissed'],
+            ['the maiden all forlorn', ' that milked'],
+            ['the cow with the crumpled horn', ' that tossed'],
+            ['the dog', ' that worried'],
+            ['the cat', ' that killed'],
+            ['the rat',' that ate'],
+            ['the malt', ' that lay in']
         ]
-        @verbs = [
-            ' that belonged to',
-            ' that kept',
-            ' that woke',
-            ' that married',
-            ' that kissed',
-            ' that milked',
-            ' that tossed',
-            ' that worried',
-            ' that killed',
-            ' that ate',
-            ' that lay in'
-        ]
-        @pieces_array = @subjects.zip(@verbs)
+        @pieces_array = @pieces_array.collect(&:first)
+            .zip(@pieces_array.collect(&:last))
     end
 
     def recite
@@ -52,6 +40,7 @@ end
 class RandomHouse < House
     def initialize(prefix = "This is ")
         super(prefix)
-        @pieces_array = @subjects.sort_by { rand }.zip(@verbs.sort_by { rand })
+        @pieces_array = @pieces_array.collect(&:first).sort_by { rand }
+            .zip(@pieces_array.collect(&:last).sort_by { rand })
     end
 end
